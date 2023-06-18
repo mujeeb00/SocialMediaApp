@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Kablammo&family=Roboto:wght@300&display=swap');
+
+
 .App {
   text-align: center;
 }
+.icons{
+  background-color: #282c34;
+  padding: 0.02rem;
+  border-radius: 0.4rem;
+  
+}
 
+.link{
+  color: #A2A3A8;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
