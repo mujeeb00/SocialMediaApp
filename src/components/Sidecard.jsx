@@ -1,10 +1,18 @@
 import React from "react";
 import "./Sidecard.css";
 import user from "../Images/user.jpg";
+import {FcHome} from 'react-icons/fc'
+import { FcBusinessman } from "react-icons/fc";
+import { FcGlobe } from "react-icons/fc";
+import { FcCalendar } from "react-icons/fc";
+import { FcConferenceCall } from "react-icons/fc";
+import { RiNotification3Fill } from "react-icons/ri";
+import { TbSettingsFilled } from "react-icons/tb";
+
 
 const Sidecard = () => {
   return (
-    <div className="main">
+    <div className="main rounded">
       <div className="background"></div>
       <div className="body">
         <div className="container text-center">
@@ -14,7 +22,7 @@ const Sidecard = () => {
           </div>
           {/* Info */}
           <div className="detail">
-            <h5 className="text-white pt-2 m-0">
+            <h5 className="text-white title pt-2 m-0">
               Sam lanson
             </h5>
             <small className="silver">Web Developer at Webistica</small>
@@ -24,33 +32,33 @@ const Sidecard = () => {
             </p>
 
              {/* Stats */}
-          <div className="stats">
-            
+          <div className="stats">            
               <li>250 <br /><span className="silver"> Post</span></li>
               <li>2.5k <br /><span className="silver"> Followers</span></li>
-              <li>365 <br /><span className="silver"> Following</span></li>
+              <li>365 <br /><span className="silver"> Following</span></li>          
+          </div>
+          </div>
           
-          </div>
-          </div>
          
         </div>
+        
          
          {/* divider */}
         <div className="divider"></div>
-
-        {/* Menu */}
-        <div className="menu mt-4">
-          <ul style={{listStyleType:'none'}}>
-            <li>Feed</li>
-            <li>Connections</li>
-            <li>Latest News</li>
-            <li>Events</li>
-            <li>Groups</li>
-            <li>Notifications</li>
-            <li>Settings</li>
-          </ul>
+          {/* Menu */}
+       <div className="menu mt-4">
+        <div className="p-2"><FcHome className="me-2 text-center" size={20}/>Feed</div>
+        <div className="p-2"><FcBusinessman className="me-1 text-center" size={27}/>Connections</div>
+        <div className="p-2"><FcGlobe className="me-1 text-center" size={27}/> Latest News</div>
+        <div className="p-2"><FcCalendar className="me-1 text-center" size={27}/>Events</div>
+        <div className="p-2"><FcConferenceCall className="me-1 text-center" size={27}/>Groups</div>
+        <div className="p-2"><RiNotification3Fill className="me-1 text-center" size={27}/>Notifications</div>
+        <div className="p-2"><TbSettingsFilled className="me-1 text-center" size={27}/>Settings</div>
+        <div className=" p-2"><a className="text-center ms-5 fw-lighter text-decoration-none" href="#"> View Profile</a></div>
         </div>
       </div>
+
+    
     </div>
   );
 };

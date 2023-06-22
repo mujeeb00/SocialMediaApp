@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Inter:wght@700&family=Kablammo&family=Roboto:wght@300&display=swap');
+
+
 .main{
     padding: 0%;
     margin: 10px;
     border: 20px black ;
-    border-radius: 2rem;
     width: 270px;
     background-color: rgb(40, 40, 41);
     color: white;
@@ -28,11 +30,18 @@
 
 .stats  li{
    display: inline-block;
-   padding:0 8px 0 13px;
+   padding:0 6px 0 6px;
+   font-family: 'Inter', sans-serif;
 }
 .stats ul li spain{
     color: rgb(21, 21, 21);
+    
 }
-.menu ul li{
-    padding: 5px;
+.title{
+    font-family: 'Inter', sans-serif;
+}
+.menu{
+    padding-left: 17px;
+    font-family: 'Inter', sans-serif;
+    
 }
