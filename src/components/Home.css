@@ -1,0 +1,13 @@
+.Post_icon:hover{
+    color: rgb(69, 85, 235);
+}
+.Post_icon{
+    cursor: pointer;
+}
+.postspan:hover{
+    color: rgb(68, 68, 241);
+}
+.postspan{
+    cursor: pointer;
+    font-weight: 300;
+}
