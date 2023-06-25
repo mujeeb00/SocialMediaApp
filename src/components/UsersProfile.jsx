@@ -10,11 +10,7 @@ const UsersProfile = ({ user}) => {
   const [comment, setComment] = useState('');
   const [comments, setComments] = useState([]);
 
-  useEffect(() => {
-    if (user) {
-      console.log('User:', user);
-    }
-  }, [user]);
+
 
   const handleCommentChange = (event) => {
     setComment(event.target.value);
