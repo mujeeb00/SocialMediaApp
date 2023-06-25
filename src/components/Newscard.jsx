@@ -4,7 +4,7 @@ const Newscard = () => {
   return (
     <div>
       <div class="mainCard ">
-        <div class="card bg-dark text-light">
+        <div class="card text-light" style={{backgroundColor:"#141519"}}>
           {/* <!-- Card header START --> */}
           <div class="card-header pb-0 border-0">
             <h5 class="card-title mb-0">Today’s news</h5>
