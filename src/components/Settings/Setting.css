@@ -26,3 +26,23 @@ span{
     background-color: #1b1c21;
     border-color: #454647;
 }
+.mainContainer{
+    background-color: #141519;
+    padding: 20px;
+    overflow: hidden;
+
+}
+.card-bodySetting{
+    background-color: #141519;
+}
+.label{
+    color:#adab9c;
+}
+.containerSetting{
+    width: 100%;
+    overflow: hidden;
+    height: 800px;
+}
+::placeholder{
+    color: #85878a;
+}
