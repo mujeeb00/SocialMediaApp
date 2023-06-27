@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Inter:wght@700&family=Kablammo&family=Roboto:wght@300&display=swap');
+
+
+.main{
+    padding: 0%;
+    margin: 10px;
+    border: 20px black ;
+    width: 265px;
+    background-color: rgb(40, 40, 41);
+    color: white;
+
+}
+.background{
+    background-image: url('./Images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 265px;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+
+}
+.profileimg{
+    height: 64px;
+    width: 60px;
+}
+
+.silver{
+    color:#a5a5a9;
+}
+
+.stats  li{
+   display: inline-block;
+   padding:0 6px 0 6px;
+   font-family: 'Inter', sans-serif;
+}
+.stats ul li spain{
+    color: rgb(21, 21, 21);
+    
+}
+.title{
+    font-family: 'Inter', sans-serif;
+}
+.menu{
+    padding-left: 17px;
+    font-family: 'Inter', sans-serif;
+    
+}

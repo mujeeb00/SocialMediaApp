@@ -11,3 +11,26 @@
     cursor: pointer;
     font-weight: 300;
 }
+.avatar-img{
+    width: 50px;
+}
+.main-container{
+    background-color: #141519;
+}
+#color{
+    color: rgb(67, 67, 232);
+   
+}
+::placeholder {
+    color: rgb(182, 182, 182) !important; 
+    
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: rgb(176, 176, 176);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: rgb(179, 179, 179);
+  }
+
