@@ -1,7 +1,10 @@
 import './Setting.css';
 import { FaUserAlt } from 'react-icons/fa';
 import { BsFillBellFill } from 'react-icons/bs';
-
+import {MdPrivacyTip} from 'react-icons/md'
+import {FaHandshake} from 'react-icons/fa'
+import {BiSolidMessageDetail} from 'react-icons/bi'
+import {RiDeleteBinFill} from 'react-icons/ri'
 const Settingcard = () => {
   return (
     <div className="card-bodySetting rounded">
@@ -14,31 +17,31 @@ const Settingcard = () => {
         </li>
         <li className="nav-item" role="presentation">
           <a className="nav-link d-flex mb-0" href="#nav-setting-tab-2" data-bs-toggle="tab" aria-selected="false" tabIndex="-1" role="tab">
-            <BsFillBellFill />
+            <BsFillBellFill className='text-warning'/>
             <span className="ms-2">Notification</span>
           </a>
         </li>
         <li className="nav-item" role="presentation">
           <a className="nav-link d-flex mb-0" href="#nav-setting-tab-3" data-bs-toggle="tab" aria-selected="false" tabIndex="-1" role="tab">
-            <BsFillBellFill />
+            <MdPrivacyTip className='text-warning'/>
             <span className="ms-2">Privacy and safety</span>
           </a>
         </li>
         <li className="nav-item" role="presentation">
           <a className="nav-link d-flex mb-0" href="#nav-setting-tab-4" data-bs-toggle="tab" aria-selected="false" tabIndex="-1" role="tab">
-            <BsFillBellFill />
+            <FaHandshake className='text-secondary'/>
             <span className="ms-2">Communications</span>
           </a>
         </li>
         <li className="nav-item" role="presentation">
           <a className="nav-link d-flex mb-0" href="#nav-setting-tab-5" data-bs-toggle="tab" aria-selected="false" tabIndex="-1" role="tab">
-            <BsFillBellFill />
+            <BiSolidMessageDetail className='text-primary' />
             <span className="ms-2">Messaging</span>
           </a>
         </li>
         <li className="nav-item" role="presentation">
           <a className="nav-link d-flex mb-0" href="#nav-setting-tab-6" data-bs-toggle="tab" aria-selected="false" tabIndex="-1" role="tab">
-            <BsFillBellFill />
+            <RiDeleteBinFill className='text-danger' />
             <span className="ms-2">Close account</span>
           </a>
         </li>
