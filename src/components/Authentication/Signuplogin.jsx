@@ -6,7 +6,7 @@ import {
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
-function Signuplogin() {
+function Signuplogin({setUser}) {
   const [login, setLogin] = useState(false);
   const [formErrors, setFormErrors] = useState({});
 
@@ -41,16 +41,19 @@ function Signuplogin() {
         createUserWithEmailAndPassword(database, email, password)
           .then((data) => {
             console.log(data, "authData");
-            history("/home");
+            history("/");
+            setUser('')
           })
           .catch((err) => {
             alert(err.code);
             setLogin(true);
+
           });
       } else {
         signInWithEmailAndPassword(database, email, password)
           .then((data) => {
-            console.log(data, "authData");
+            console.log(data.user.uid, "authData");
+            setUser(data.user.uid);
             history("/home");
           })
           .catch((err) => {
