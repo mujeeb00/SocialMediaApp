@@ -8,30 +8,26 @@ const Usersprofiletop = ({ user }) => {
     if (user) {
       console.log('User:', user);
     }
-  }, [user]);
+  }, []);
 
   if (!user) {
-    // Show a loader while data is being fetched
     return <Spinner animation="border" />;
   }
 
   // Render the user profile component
   return (
-    <div className="row" key={user.id}>
-      <div className="col-2 ps-3">
+    <div className=" profilediv d-flex justify-content-start" key={user.id}>
+      <div className="">
         <img
-          className="rounded-circle"
-          style={{ width: '50px' }}
+          className="rounded-circle me-2"
+          style={{ width: "50px" }}
           src={user.avatar_url}
           alt=""
         />
       </div>
-      <div className="col-4">
-        <p className="fw-bold">
-          {user.login}
-          <br />
-          <span className="fw-light">{user.type}</span>
-        </p>
+      <div className="">
+        <span className="usertitle">{user.login}</span> <br />{" "}
+        <p className="fw-light usertype">{user.type}</p>
       </div>
     </div>
   );
