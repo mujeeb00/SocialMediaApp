@@ -11,7 +11,7 @@ const Home = () => {
 
   
   return (
-    <div>
+    <div style={{ overflow: 'hidden' }}>
       <div className="row bg-dark">
         <div className="col-12">
             <Navhead/>
@@ -20,10 +20,10 @@ const Home = () => {
             <div className="ms-2 col-lg-3 d-none d-xl-block">
                 <Sidecard/>
             </div>
-            <div className='col-xl-5 col-12'>
+            <div className='col-xl-5 col-12 ms-2'>
                 <StoryCarousel/>
                 <Posting/>
-                <Postdata/>
+                <Postdata />
             </div>
             <div className="col-lg-3 d-none d-xl-block">
                 <Suggestioncard /> <br />
