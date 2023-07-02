@@ -7,7 +7,7 @@ const RandomImages = () => {
 
   return (
     <div>
-      <img className='rounded img-fluid' src={`https://picsum.photos/${width}/${height}?id=${uniqueId}`} alt="Placeholder" />
+      <img className='rounded img-fluid d-block m-auto' src={`https://picsum.photos/${width}/${height}?id=${uniqueId}`} alt="Placeholder" />
     </div>
   );
 };
