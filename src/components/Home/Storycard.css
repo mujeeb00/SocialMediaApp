@@ -1,8 +1,12 @@
 .story-carousel-container {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
-  
+  .story-carousel-container::-webkit-scrollbar {
+    width: 0; 
+  }
   .story-carousel {
     display: flex;
     gap: 16px;
@@ -44,39 +48,39 @@
     border-style: dashed !important;
 }
 
-/* * {
+* {
     scrollbar-width: thin;
-    scrollbar-color: #A7ABAE #CACACA;
+    scrollbar-color: #282829 #313030;
   }
   
   
   *::-webkit-scrollbar {
-    width: 10px;
-    width: 10px;
+    width: 0px;
+    width: 0px;
   }
   *::-webkit-scrollbar-track {
-    border-radius: 20px;
-    background-color: #CACACA;
+    border-radius: 0px;
+    background-color: #312e2e;
   }
   
   *::-webkit-scrollbar-track:hover {
-    background-color: #CBCCD3;
+    background-color: #272729;
   }
   
   *::-webkit-scrollbar-track:active {
-    background-color: #B3B0C2;
+    background-color: #3c3b3f;
   }
   
   *::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #A7ABAE;
+    background-color: #353738;
   }
   
   *::-webkit-scrollbar-thumb:hover {
-    background-color: #9998A3;
+    background-color: #313135;
   }
   
   *::-webkit-scrollbar-thumb:active {
-    background-color: #99A1A3;
+    background-color: #2d2f30;
   }
-   */
+  
