@@ -42,6 +42,7 @@ const UsersProfile = ({ user }) => {
         <div className="ms-2">
           <InputGroup className="mb-3">
             <Form.Control
+            className="bg-dark border-0"
               placeholder="Add comment..."
               aria-label="Add comment..."
               aria-describedby="basic-addon2"
@@ -49,6 +50,7 @@ const UsersProfile = ({ user }) => {
               onChange={handleCommentChange}
             />
             <Button
+            className="border-1 border-dark"
               variant="outline-secondary"
               id="button-addon2"
               onClick={handleAddComment}
