@@ -129,9 +129,9 @@ const Posting = () => {
           </li>
         </ul>
       </div>
-      <div className="card main-container card-body mt-2">
+      
         {posttext.map((post, index) => (
-          <>
+         <div className="card main-container card-body mt-2">
             <div
               className="d-flex justify-content-start Textcontainer  rounded"
               key={index}
@@ -153,9 +153,10 @@ const Posting = () => {
             <div className="text-light ps-2" key={index}>
               {post}
             </div>
-          </>
+            </div>
+         
         ))}
-      </div>
+      
     </div>
   );
 };
