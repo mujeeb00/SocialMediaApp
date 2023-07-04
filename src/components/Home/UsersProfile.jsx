@@ -42,7 +42,7 @@ const UsersProfile = ({ user }) => {
         <div className="ms-2">
           <InputGroup className="mb-3">
             <Form.Control
-            className="bg-dark border-0"
+            className="bg-dark border-0 text-bg-secondary"
               placeholder="Add comment..."
               aria-label="Add comment..."
               aria-describedby="basic-addon2"

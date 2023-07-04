@@ -33,4 +33,6 @@
   ::-ms-input-placeholder { /* Microsoft Edge */
    color: rgb(179, 179, 179);
   }
-
+  .Textcontainer{
+    background-color: #141519;
+  }

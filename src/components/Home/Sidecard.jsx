@@ -40,7 +40,7 @@ const Sidecard = () => {
                 </p>
                 {/* Stats */}
                 <Row className="justify-content-center mt-3">
-                  <Col xs={4} className="text-center">
+                  <Col xs={3} className="text-center">
                     <div>
                       <span className="stats-number">250</span><br />
                       <span className="silver">Posts</span>
@@ -52,7 +52,7 @@ const Sidecard = () => {
                       <span className="silver">Followers</span>
                     </div>
                   </Col>
-                  <Col xs={4} className="text-center">
+                  <Col xs={5} className="text-center">
                     <div>
                       <span className="stats-number">365</span><br />
                       <span className="silver">Following</span>

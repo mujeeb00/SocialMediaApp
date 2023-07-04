@@ -25,6 +25,15 @@
   }
 }
 
+.stories-square.stories.carousel .story {
+  border-radius: 0;
+  height: 150px !important;
+  position: relative;
+  width: 120px !important;
+  max-width: inherit !important;
+  margin-bottom: 4px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

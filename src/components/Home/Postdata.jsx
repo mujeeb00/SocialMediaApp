@@ -10,6 +10,7 @@ import Usersprofiletop from "./Usersprofiletop";
 import "./Home.css";
 
 
+
 const Postdata = () => {
   const [posts, setPosts] = useState([]);
   const users = Usersdata();
@@ -25,7 +26,6 @@ const Postdata = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.log(error);
         setLoading(false);
       });
   }, []);
@@ -54,12 +54,12 @@ const Postdata = () => {
           <div key={post.id}>
             <div
               style={{ backgroundColor: "#141519" }}
-              className="text-white p-3 mt-2 rounded"
+              className="text-white p-2 mt-2  rounded"
             >
               <Usersprofiletop user={user} />
               <h3 className="mt-4">{post.title}</h3>
               <p>{post.body}</p>
-              <RandomImages />
+              <RandomImages  />
               <div className="mt-1"  onClick={() => liked(post.id)}>
                 <span className="me-2 ms-2 Post_icon" >
                   {showAlert && (
@@ -84,6 +84,7 @@ const Postdata = () => {
                 </span>
               </div>
               <UsersProfile user={user} />
+
             </div>
           </div>
         );

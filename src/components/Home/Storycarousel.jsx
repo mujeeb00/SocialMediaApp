@@ -7,7 +7,7 @@ const StoryCarousel = () => {
   const users = Usersdata();
 
   return (
-    <div className="story-carousel-container overflow-hidden">
+    <div className="story-carousel-container ">
       <div className="story-carousel">
         <div class="card border bg-dark text-light border-2 border-dashed h-150px px-4 px-sm-5 shadow-none d-flex align-items-center justify-content-center text-center">
           <div>

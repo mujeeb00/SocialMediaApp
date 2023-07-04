@@ -11,10 +11,10 @@ const Accountsetting = ({ inputs,title}) => {
         <form className="row">
           {inputs.map((input, index) => (
             <div className={input.colClass} key={index}>
-              <label className="form-label label">{input.label}</label>
+              <label className="form-label label ">{input.label}</label>
               {input.type === 'textarea' ? (
                 <textarea
-                  className="form-control text-secondary bg-dark"
+                  className="form-control text-secondary bg-dark border-0"
                   rows={input.rows}
                   placeholder={input.placeholder}
                   defaultValue={input.value}
@@ -22,7 +22,7 @@ const Accountsetting = ({ inputs,title}) => {
               ) : (
                 <input
                   type={input.type}
-                  className="form-control bg-dark"
+                  className="form-control bg-dark border-0"
                   placeholder={input.placeholder}
                   defaultValue={input.value}
                 />

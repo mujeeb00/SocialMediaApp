@@ -27,7 +27,7 @@ const Usersprofiletop = ({ user }) => {
       </div>
       <div className="">
         <span className="usertitle">{user.login}</span> <br />{" "}
-        <p className="fw-light usertype">{user.type}</p>
+        <p className="fw-light text-secondary usertype">{user.type}</p>
       </div>
     </div>
   );

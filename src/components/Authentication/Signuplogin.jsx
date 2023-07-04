@@ -57,7 +57,7 @@ function Signuplogin({setUser}) {
             history("/home");
           })
           .catch((err) => {
-            alert(err.code);
+            alert(err.code)
           });
       }
     }
