@@ -29,7 +29,7 @@ const Suggestioncard = () => {
               {/* Name */}
 
               
-              <p className="fw-bold">{user.login}<br /> <p className="fw-light">{user.type}</p></p>
+              <p className="fw-bold">{user.login}<br /> <p className="fw-light text-secondary">{user.type}</p></p>
               
             </div>
             <div className="col-3">
