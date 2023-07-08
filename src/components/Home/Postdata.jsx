@@ -47,18 +47,18 @@ const Postdata = () => {
 
   return (
     <div>
-      {posts.slice(8, 15).map((post, index) => {
+      {posts.slice(8,18).map((post, index) => {
         const user = users[index % users.length];
 
         return (
           <div key={post.id}>
             <div
               style={{ backgroundColor: "#141519" }}
-              className="text-white p-2 mt-2  rounded"
+              className="text-white p-2 mt-2  rounded p-3"
             >
               <Usersprofiletop user={user} />
-              <h3 className="mt-4">{post.title}</h3>
-              <p>{post.body}</p>
+              <h3 className="mt-4 text-light">{post.title}</h3>
+              <p className="text-secondary">{post.body}</p>
               <RandomImages  />
               <div className="mt-1"  onClick={() => liked(post.id)}>
                 <span className="me-2 ms-2 Post_icon" >
