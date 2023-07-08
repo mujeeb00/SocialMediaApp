@@ -5,14 +5,30 @@ import { BsImageFill } from "react-icons/bs";
 import { PiVideoFill } from "react-icons/pi";
 import { BsFillCalendarEventFill } from "react-icons/bs";
 import { FaRegSmile } from "react-icons/fa";
+import UsersProfile from '../Home/UsersProfile'
+import Usersprofiletop from '../Home/Usersprofiletop'
+import { AiFillLike } from "react-icons/ai";
+import { FaComment } from "react-icons/fa";
+import { Alert, Spinner } from "react-bootstrap";
 
 const Posting = () => {
   const [text, setText] = useState("");
   const [posttext, setpostText] = useState([]);
+  const [showAlert, setShowAlert] = useState(false);
+  const [like,setLike]=useState([])
+
 
   function handleText(e) {
     setText(e.target.value);
   }
+
+  function liked(postId) {
+    setShowAlert(true);
+    setTimeout(() => setShowAlert(false), 1300);
+    // setColor('color')
+    setLike([...like, postId])
+  }
+
 
   const textPost = () => {
     if (text.trim() !== "") {
@@ -150,9 +166,34 @@ const Posting = () => {
               </div>
               <br />
             </div>
-            <div className="text-light ps-2" key={index}>
+            <div className="text-secondary fs-3 p-2 rounded " key={index}>
               {post}
             </div>
+            <div className="mt-1"  onClick={() => liked(post.id)}>
+                <span className="me-2 ms-2 Post_icon" >
+                  {showAlert && (
+                    <div
+                   
+                      className="alert alert-success mb-0 alert-dismissible fade show"
+                      role="alert" 
+                    >
+                      Liked successfully!
+                    </div>
+                  )}
+                  <AiFillLike className="me-1 "   style={{color: like.includes(post.id) ? 'blue' : 'white'}} />
+                  <span   style={{color: like.includes(post.id) ? 'blue' : 'white'}} className="text-center postspan"   >
+                    Liked {Math.floor(Math.random() * 100)}
+                  </span>
+                </span>
+                <span className="me-2 ms-2 Post_icon">
+                  <FaComment className="me-1 " />
+                  <span className="text-center postspan">
+                    Comments {Math.floor(Math.random() * 10)}
+                  </span>
+                </span>
+              </div>
+            <UsersProfile  user={user} />
+                     
             </div>
          
         ))}
