@@ -22,12 +22,12 @@ const Accountsetting = ({ inputs,title}) => {
               ) : (
                 <input
                   type={input.type}
-                  className="form-control bg-dark border-0"
+                  className="form-control bg-dark text-secondary border-0"
                   placeholder={input.placeholder}
                   defaultValue={input.value}
                 />
               )}
-              {input.helperText && <small className="text-secondary">{input.helperText}</small>}
+              {input.helperText && <small className="text-light">{input.helperText}</small>}
             </div>
           ))}
           <div className="col-12 text-end">

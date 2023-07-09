@@ -15,7 +15,7 @@ const Newscard = () => {
             {/* <!-- News item --> */}
             <div class="mb-3">
               <h6 class="mb-0">
-                <a href="#">
+                <a >
                   Ten questions you should answer truthfully
                 </a>
               </h6>
@@ -24,7 +24,7 @@ const Newscard = () => {
             {/* <!-- News item --> */}
             <div class="mb-3">
               <h6 class="mb-0">
-                <a href="#">
+                <a >
                   Five unbelievable facts about money
                 </a>
               </h6>
@@ -33,7 +33,7 @@ const Newscard = () => {
             {/* <!-- News item --> */}
             <div class="mb-3">
               <h6 class="mb-0">
-                <a href="#">
+                <a >
                   Best Pinterest Boards for learning about business
                 </a>
               </h6>
@@ -42,7 +42,7 @@ const Newscard = () => {
             {/* <!-- News item --> */}
             <div class="mb-3">
               <h6 class="mb-0">
-                <a href="#">
+                <a >
                   Skills that you can learn from business
                 </a>
               </h6>

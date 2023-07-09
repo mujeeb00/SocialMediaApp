@@ -13,12 +13,7 @@ a{
 a:hover{
    background-color: rgba(18, 106, 237, 0.216);
 }
-span{
-    color: aliceblue;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    
-}
+
 .main_container{
     background-color: #141519;
 }

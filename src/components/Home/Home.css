@@ -9,7 +9,6 @@
 }
 .postspan{
     cursor: pointer;
-    font-weight: 300;
 }
 .avatar-img{
     width: 50px;
@@ -35,4 +34,8 @@
   }
   .Textcontainer{
     background-color: #141519;
+  }
+  hr.hr{ 
+    border: 0;
+  border-top: 3px double #333; 
   }

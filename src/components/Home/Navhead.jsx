@@ -60,24 +60,24 @@ const Navhead = () => {
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto my-lg-0" navbarScroll>
               <NavDropdown title="Demo" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Account</NavDropdown.Item>
+                <NavDropdown.Item href="#action3"><Link to="/home">  Home default</Link></NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
-                  Another action
+                  Home classic
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5">
-                  Something else here
+                  Home post
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Pages" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Account</NavDropdown.Item>
+                <NavDropdown.Item href="#action3">Albums</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
-                  Another action
+                celeberations
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
+                  Messaging               
+                   </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown
                 title="Account"
@@ -86,8 +86,8 @@ const Navhead = () => {
                 onMouseLeave={handleMouseLeave}
                 show={isOpen}
               >
-                <NavDropdown.Item href="#action3">
-                  <Link to='/createpage'>
+                <NavDropdown.Item >
+                  <Link className="text-dark mt-1" to='/createpage'>
                   create a page
                   </Link>
                 </NavDropdown.Item>
@@ -115,17 +115,17 @@ const Navhead = () => {
               <Nav.Link href="#action1 ">Network</Nav.Link>
 
               {/* Icons */}
-              <div className="icons ms-1 me-2 mt-1">
+              <div className="icons ms-1 me-2  ">
                 <Nav.Link href="#action1">
                   <TbMessage size={19} />
                 </Nav.Link>
               </div>
-              <div className="icons me-2 mt-1">
-              <Link to="/settings">
-                  <RiSettings5Fill size={18} />
+              <div className="icons me-2 mt-2">
+              <Link to="/settings" style={{color:'silver'}} >
+                  <RiSettings5Fill size={19} />
                 </Link>
               </div>
-              <div className="icons me-2 mt-1">
+              <div className="icons me-2 ">
                 <Nav.Link href="#action1">
                   <BsBellFill size={15} />
                 </Nav.Link>
@@ -143,7 +143,9 @@ const Navhead = () => {
               >
                 <NavDropdown.Item href="#action3">Account</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
-                  Settings
+                <Link to="/settings" className='text-dark' >
+                 Settings
+                </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5" >

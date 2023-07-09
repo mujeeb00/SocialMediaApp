@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import user from "./Images/user.jpg";
 import "./Home.css";
 import { BsImageFill } from "react-icons/bs";
@@ -6,36 +6,60 @@ import { PiVideoFill } from "react-icons/pi";
 import { BsFillCalendarEventFill } from "react-icons/bs";
 import { FaRegSmile } from "react-icons/fa";
 import UsersProfile from '../Home/UsersProfile'
-import Usersprofiletop from '../Home/Usersprofiletop'
 import { AiFillLike } from "react-icons/ai";
 import { FaComment } from "react-icons/fa";
-import { Alert, Spinner } from "react-bootstrap";
+import {SlOptionsVertical} from 'react-icons/sl'
+import { Dropdown } from "react-bootstrap";
+import {TiDelete} from 'react-icons/ti'
 
 const Posting = () => {
   const [text, setText] = useState("");
-  const [posttext, setpostText] = useState([]);
+  const [posttext, setPostText] = useState([]);
   const [showAlert, setShowAlert] = useState(false);
   const [like,setLike]=useState([])
+
+
 
 
   function handleText(e) {
     setText(e.target.value);
   }
 
-  function liked(postId) {
+  function liked(index) {
     setShowAlert(true);
     setTimeout(() => setShowAlert(false), 1300);
-    // setColor('color')
-    setLike([...like, postId])
+    setLike([...like, index]);
   }
+
+  
+  const handleDelete = (index) => {
+    setPostText((prevPosts) => {
+      const updatedPosts = [...prevPosts];
+      updatedPosts.splice(index, 1);
+      return updatedPosts;
+    });
+  };
 
 
   const textPost = () => {
     if (text.trim() !== "") {
-      setpostText((prevPosts) => [...prevPosts, text]);
+      setPostText((prevPosts) => [...prevPosts, text]);
       setText("");
     }
   };
+
+  const CustomToggle = React.forwardRef(({ onClick }, ref) => (
+    <div
+      ref={ref}
+      onClick={(e) => {
+        e.preventDefault();
+        onClick(e);
+      }}
+      style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
+    >
+      <SlOptionsVertical style={{ color: '#d2d4db' }} />
+    </div>
+  ));
 
   return (
     <div>
@@ -149,7 +173,7 @@ const Posting = () => {
         {posttext.map((post, index) => (
          <div className="card main-container card-body mt-2">
             <div
-              className="d-flex justify-content-start Textcontainer  rounded"
+              className="d-flex justify-content-start Textcontainer  rounded position-relative"
               key={index}
             >
               <div className="p-1">
@@ -161,14 +185,33 @@ const Posting = () => {
                 />
               </div>
               <div className="">
-                <span>Sam lanson</span> <br />{" "}
+                <span className="text-light" >Sam lanson</span> <br />{" "}
                 <p className="fw-light text-secondary">web Developer</p>
               </div>
+              
+              <div
+          className="text-light position-absolute top-0 end-0"
+          
+        >
+          
+          <Dropdown>
+      <Dropdown.Toggle as={CustomToggle}  id="dropdownMenuButton">
+      <SlOptionsVertical />
+      </Dropdown.Toggle>
+      <Dropdown.Menu style={{marginRight:'2rem', padding:'5'}} className='bg-dark rounded' >
+        {/* Dropdown menu items */}
+        <Dropdown.Item className="text-secondary rounded" onClick={handleDelete}  href="#"><TiDelete size={20} className='text-center align-item-center mb-1' />Delete</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+        </div>
+                    
               <br />
             </div>
+           
             <div className="text-secondary fs-3 p-2 rounded " key={index}>
               {post}
             </div>
+            <hr className="hr" />
             <div className="mt-1"  onClick={() => liked(post.id)}>
                 <span className="me-2 ms-2 Post_icon" >
                   {showAlert && (
@@ -180,17 +223,18 @@ const Posting = () => {
                       Liked successfully!
                     </div>
                   )}
-                  <AiFillLike className="me-1 "   style={{color: like.includes(post.id) ? 'blue' : 'white'}} />
-                  <span   style={{color: like.includes(post.id) ? 'blue' : 'white'}} className="text-center postspan"   >
+                  <AiFillLike className="me-1 "   style={{color: like.includes(index) ? 'blue' : 'silver'}} />
+                  <span   style={{color: like.includes(index) ? 'blue' : 'white'}} className="text-center fw-lighter postspan"   >
                     Liked {Math.floor(Math.random() * 100)}
                   </span>
                 </span>
                 <span className="me-2 ms-2 Post_icon">
-                  <FaComment className="me-1 " />
-                  <span className="text-center postspan">
+                  <FaComment className="me-1 " style={{color:'silver'}} />
+                  <span className="text-center postspan fw-lighter" style={{color:'silver'}}>
                     Comments {Math.floor(Math.random() * 10)}
                   </span>
                 </span>
+                
               </div>
             <UsersProfile  user={user} />
                      

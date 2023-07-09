@@ -5,7 +5,7 @@ import UsersProfile from "./UsersProfile";
 import Usersdata from "../hooks/Usersdata";
 import { AiFillLike } from "react-icons/ai";
 import { FaComment } from "react-icons/fa";
-import { Alert, Spinner } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 import Usersprofiletop from "./Usersprofiletop";
 import "./Home.css";
 
@@ -60,7 +60,8 @@ const Postdata = () => {
               <h3 className="mt-4 text-light">{post.title}</h3>
               <p className="text-secondary">{post.body}</p>
               <RandomImages  />
-              <div className="mt-1"  onClick={() => liked(post.id)}>
+              <hr className="hr" />
+              <div className="mt-1 mb-1"  onClick={() => liked(post.id)}>
                 <span className="me-2 ms-2 Post_icon" >
                   {showAlert && (
                     <div
@@ -71,14 +72,14 @@ const Postdata = () => {
                       Liked successfully!
                     </div>
                   )}
-                  <AiFillLike className="me-1 "   style={{color: like.includes(post.id) ? 'blue' : 'white'}} />
-                  <span   style={{color: like.includes(post.id) ? 'blue' : 'white'}} className="text-center postspan"   >
+                  <AiFillLike className="me-1 "   style={{color: like.includes(post.id) ? 'blue' : 'silver'}} />
+                  <span   style={{color: like.includes(post.id) ? 'blue' : 'silver'}} className="text-center postspan fw-normal "   >
                     Liked {Math.floor(Math.random() * 100)}
                   </span>
                 </span>
                 <span className="me-2 ms-2 Post_icon">
-                  <FaComment className="me-1 " />
-                  <span className="text-center postspan">
+                  <FaComment className="me-1" style={{color:'silver'}} />
+                  <span className="text-center fw-normal postspan " style={{color:'silver'}}>
                     Comments {Math.floor(Math.random() * 10)}
                   </span>
                 </span>

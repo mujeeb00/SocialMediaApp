@@ -40,9 +40,9 @@ const UsersProfile = ({ user }) => {
         </div>
 
         <div className="ms-2">
-          <InputGroup className="mb-3">
+          <InputGroup className="mb-3 ">
             <Form.Control
-            className="bg-dark border-0 text-bg-secondary"
+            className="bg-dark  border-0 text-bg-secondary"
               placeholder="Add comment..."
               aria-label="Add comment..."
               aria-describedby="basic-addon2"
@@ -73,8 +73,8 @@ const UsersProfile = ({ user }) => {
           </div>
           <div className="col-8">
             <p className="mt-3 ms-1 bg-dark p-3 rounded fw-lighter fs-6">
-              <span>Lori furgeson</span> <br />
-              &nbsp;&nbsp;{comment}
+              <span className='text-light' >Lori furgeson</span> <br />
+              &nbsp;&nbsp;<span className="text-secondary fw-lighter fs-6">{comment}</span>
             </p>
 
             <ul class="nav nav-divider  small">
