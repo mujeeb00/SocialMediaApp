@@ -6,9 +6,14 @@ import {
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
-function Signuplogin({setUser}) {
+// Date picker
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+function Signuplogin({ setUser }) {
   const [login, setLogin] = useState(false);
   const [formErrors, setFormErrors] = useState({});
+  const [selectedDate, setSelectedDate] = useState(null);
 
   const history = useNavigate();
 
@@ -16,7 +21,7 @@ function Signuplogin({setUser}) {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const birthdate = type === "signup" ? e.target.birthdate.value : null;
+    const birthdate = type === "signup" ? selectedDate : null;
 
     // Form validation
     const errors = {};
@@ -42,12 +47,11 @@ function Signuplogin({setUser}) {
           .then((data) => {
             console.log(data, "authData");
             history("/");
-            setUser('')
+            setUser("");
           })
           .catch((err) => {
             alert(err.code);
             setLogin(true);
-
           });
       } else {
         signInWithEmailAndPassword(database, email, password)
@@ -57,7 +61,7 @@ function Signuplogin({setUser}) {
             history("/home");
           })
           .catch((err) => {
-            alert(err.code)
+            alert(err.code);
           });
       }
     }
@@ -99,14 +103,26 @@ function Signuplogin({setUser}) {
             </div>
             {login ? null : (
               <div className="form-group my-2">
-                <input
+                <ReactDatePicker
                   name="birthdate"
-                  type="text"
                   className={`form-control ${
                     formErrors.birthdate ? "is-invalid" : ""
                   }`}
-                  placeholder="Birthdate (MM/YYYY)"
+                  placeholderText="Birthdate (MM/YYYY)"
+                  dateFormat="MM/yyyy"
+                  showMonthYearPicker
+                  selected={null} // date selection
+                  onChange={(date) => setSelectedDate(date)}
+                  value={selectedDate ? selectedDate.toLocaleString().split(" ")[0] : ""
+                  }
                 />
+                {selectedDate && (
+                  <input
+                    type="hidden"
+                    name="birthdate"
+                    value={selectedDate.toISOString().slice(0, 10)}
+                  />
+                )}
                 {formErrors.birthdate && (
                   <div className="invalid-feedback">{formErrors.birthdate}</div>
                 )}
