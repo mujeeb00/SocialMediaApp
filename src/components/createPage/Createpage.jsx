@@ -10,36 +10,43 @@ const Createpage = () => {
     }
     const inputs = [
         {
+          name :'page name',
           label: 'Page name',
           value: 'Webistica',
           colClass: 'col-sm-6 col-lg-12',
         },
         {
+          name : 'display name',
           label: 'Display name',
           value: 'Webistica',
           colClass: 'col-sm-6 col-lg-4',
         },
         {
+          name:'email',
           label: 'Email',
           value: '',
           colClass: 'col-sm-6 col-lg-4',
         },
         {
+          name:'category',
           label: 'Category(required)',
           value: '@samlanson',
           colClass: 'col-sm-6 col-lg-4',
         },
         {
+          name:'website url',
           label: 'Website URL',
           value: '12/12/1990',
           colClass: 'col-lg-6',
         },
         {
+          name:'phone number',
           label: 'Phone number',
           value: '(678) 324-1251',
           colClass: 'col-sm-6',
         },
         {
+          name:'about page',
           label: 'About Page',
           value: '',
           type: 'textarea',
